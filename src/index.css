@@ -6,6 +6,7 @@ Zomp - rgba(67, 170, 139, 1)
 firey rose - rgba(247, 100, 107, 1)
 lavendar bush - rgba(255, 235, 245, 1)
 */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;500;600&display=swap');
 
 body, nav, section, article, footer, h1, h2, h3, h4, h5, h6, p, a, ul, li, dt, dd, address, figure, figcaption, form, fieldset, input, select, textarea {
   margin: 0;
@@ -24,8 +25,7 @@ html {
 
 body {
   background-color: #ccc;
-  padding: 1.5rem;
-  font-family: -apple-system, 'Roboto', 'Segoe UI', 'Oxygen',
+  font-family: -apple-system, 'Roboto', 'Monserrat', 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

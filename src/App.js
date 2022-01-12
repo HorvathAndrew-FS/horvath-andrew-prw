@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 //images
 // import AvatarIcon from '../src/images/AvatarAndrew.jpg';
 // import Avatar from '../src/components/Avatar';
+//header
+import MainHeader from './components/MainHeader'
 
 //buttons
 import ButtonStandard from './components/buttons/ButtonStandard';
@@ -20,21 +22,14 @@ import Tech from './images/tech-gadgets.jpg';
 class App extends Component {
   render() {
     return (
-      <div className='App' style={styles.container}>
-        <h2 style={styles.h2}>Buttons:</h2>
-        <div style={styles.btnContainer}>
-            <ButtonStandard btnText='Standard' />
-            <ButtonOutline btnText='Outline' />
-            <ButtonSmall btnText='Small' />
-        </div>
-
-        <h2 style={styles.h2}>Post Form:</h2>
-        <div style={styles.btnContainer}>
+      <div>
+          <MainHeader />
+      <div style={styles.container}>
+        <div style={styles.contentContainer}>
           <PostForm />
         </div>
 
-        <h2 style={styles.h2}>Right Side Ads:</h2>
-        <div style={styles.btnContainer}>
+        <div style={styles.contentContainer}>
           <MyAd articleImg={Sprouts} articleAlt="This is my alt tag for brussel sprouts!!"
           articleTitle="Brussel Sprouts"
           articleText="Brussel sprouts are a wonderfully delicious vegetable. Eveyone should enjoy how amazing they are when roasted! a little olive oil and some salt go a long way!" />
@@ -46,12 +41,7 @@ class App extends Component {
           But despite the benefits, too much tech use is contributing to serious health and psychological concerns, leaving leaders with the tough task of drawing a line between access and obsession. Let's take a closer look at the impacts of too much tech use and explore 3 steps district tech leaders can take toward a more balanced approach to technology." />
         </div>
 
-
-        {/*
-        <div>
-        <Avatar AvatarIcon={AvatarIcon} />
-        <img src={AvatarIcon} alt='logo' style={styles.logo} />
-        </div> */}
+        </div>
       </div>
     );
   }
@@ -69,7 +59,7 @@ const styles = {
     width: '75%',
     borderRadius: '5px'
   },
-  btnContainer: {
+  contentContainer: {
     width: '100%',
     marginBottom: '2rem'
   },
