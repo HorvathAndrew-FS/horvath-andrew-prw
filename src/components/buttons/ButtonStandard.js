@@ -18,10 +18,10 @@ const styles = {
         fontSize: '1.5rem',
         fontWeight: '700',
         textTransform: 'uppercase',
-        padding: '1% 2.25%',
+        padding: '2rem',
         borderRadius: '5px',
         border: '1px solid #121212',
-        cursor: 'pointer'
+        cursor: 'pointer',
     }
  
 }

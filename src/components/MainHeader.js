@@ -33,7 +33,6 @@ export default MainHeader
 
 const styles = {
     mainHeader: {
-        marginBottom: '3rem',
         padding: '1.5%',
         background: 'rgba(37, 68, 65, 1)',
         display: 'flex',
