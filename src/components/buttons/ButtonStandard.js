@@ -13,9 +13,11 @@ export default ButtonStandard
 
 const styles = {
     btn: {
-        background: '#121212',
-        color: '#fff',
-        fontSize: '1.2rem',
+        background: 'rgba(37, 68, 65, 1)',
+        color: 'rgba(126, 217, 87, 1)',
+        fontSize: '1.5rem',
+        fontWeight: '700',
+        textTransform: 'uppercase',
         padding: '1% 2.25%',
         borderRadius: '5px',
         border: '1px solid #121212',

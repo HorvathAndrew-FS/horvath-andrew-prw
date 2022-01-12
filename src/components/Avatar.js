@@ -10,8 +10,8 @@ export default Avatar
 
 const styles = {
     Avatar: {
-        height: '75px',
+        height: '7.5rem',
         cursor: 'pointer',
         borderRadius: '50%'
-    }
+   }
 }
