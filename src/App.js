@@ -39,6 +39,7 @@ class App extends Component {
           articleText="
           But despite the benefits, too much tech use is contributing to serious health and psychological concerns, leaving leaders with the tough task of drawing a line between access and obsession. Let's take a closer look at the impacts of too much tech use and explore 3 steps district tech leaders can take toward a more balanced approach to technology." />
           </aside>
+          <div class="container">Text</div>
       
           
 
