@@ -10,7 +10,7 @@ const MyAd = props => {
             </p>
             <div style={styles.buttons}>
                 <button type="submit" style={styles.cardButton}>Share</button>
-                <button type="submit" style={styles.cardButton}>More</button>
+                <button type="submit" style={styles.cardButton}>More Stuff</button>
             </div>
         </article>
     )
