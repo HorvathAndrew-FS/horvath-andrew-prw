@@ -28,6 +28,7 @@ const StyleComp = styled.div`
     color: rgba(37, 68, 65, 1);
     padding: 2rem;
     margin: 1rem 3rem 0 0;
+    border-radius: .75rem;
 
     form {
         width: 100%;

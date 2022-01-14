@@ -39,7 +39,8 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        boxShadow: '1px 6px 7px 1px rgba(37, 68, 65, .3)'
+        boxShadow: '1px 6px 10px 3px rgba(37, 68, 65, .4)',
+        marginBottom: '2rem',
     },
     logoWrapper: {
         display: 'flex',

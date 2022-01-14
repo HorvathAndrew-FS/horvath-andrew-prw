@@ -28,19 +28,3 @@ const Standard = styled.button`
         background: rgba(247, 100, 107, 1);
     }
 `
-
-
-const styles = {
-    btn: {
-        background: '',
-        color: '',
-        fontSize: '1.5rem',
-        fontWeight: '700',
-        textTransform: 'uppercase',
-        padding: '2rem',
-        borderRadius: '5px',
-        border: '1px solid #121212',
-        cursor: 'pointer',
-    }
- 
-}

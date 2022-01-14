@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  background-color: #ccc;
+  background-color: rgba(255, 235, 245, 1);
   font-family: -apple-system, 'Roboto', 'Monserrat', 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

@@ -66,6 +66,6 @@ const styles = {
 
   },
   ads: {
-    paddingRight: 10,
+    paddingRight: 20,
   }
 }
