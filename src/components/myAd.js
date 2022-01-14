@@ -25,7 +25,7 @@ const styles = {
         padding: '3%',
         background: 'rgba(37, 68, 65, 1)',
         borderRadius: '1rem',
-        boxShadow: '0 4px 8px 0 rgba(37, 68, 65, .2), 0 6px 20px 0 rgba(37, 68, 65, .5)',
+        boxShadow: '0 5px 8px 0 rgba(37, 68, 65, .2), 0 6px 20px 0 rgba(37, 68, 65, .5)',
         textAlign: 'center',
         margin: '1rem'
     },
