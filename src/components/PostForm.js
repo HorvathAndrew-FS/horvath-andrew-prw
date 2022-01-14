@@ -4,15 +4,16 @@ import ButtonOutline from '../components/buttons/ButtonOutline';
 const PostForm = props => {
     return (
         <form style={styles.postForm}>
-            <div style={styles.formTitle}>
+            {/* You do not need these divs */}
+            {/* <div style={styles.formTitle}> */}
                 <h3 style={styles.formH3}>Create Post</h3>
-            </div>
-            <div style={styles.containerTitle}>
+            {/* </div> */}
+            {/* <div style={styles.containerTitle}> */}
                 <input style={styles.input} placeholder="first name" />
-            </div>
-            <div style={styles.containerDescription}>
+            {/* </div> */}
+            {/* <div style={styles.containerDescription}> */}
                 <textarea style={styles.textarea} cols="30" rows="15" placeholder="enter post content here" />
-            </div>
+            {/* </div> */}
             <div style={styles.btnWrap}>
                 <ButtonOutline btnText="Submit" />
             </div>
@@ -55,5 +56,6 @@ const styles = {
         textTransform: 'uppercase',
         color: 'rgba(247, 100, 107, 1)',
         marginBottom: '2rem',
+        width: '100%'
     },
 }

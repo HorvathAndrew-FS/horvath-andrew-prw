@@ -23,5 +23,4 @@ const styles = {
         border: '2px solid rgba(247, 100, 107, 1)',
         cursor: 'pointer'
     }
- 
 }

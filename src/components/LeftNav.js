@@ -3,11 +3,11 @@ import NavButton from './buttons/ButtonStandard';
 
 const LeftNav = props => {
     return (
-        <div style={styles.leftNavContainer}>
-        <NavButton btnText="News Feed" />
-        <NavButton btnText="Messages" />
-        <NavButton btnText="Watch" />
-        </div>
+        <nav style={styles.leftNavContainer}>
+            <NavButton btnText="News Feed" />
+            <NavButton btnText="Messages" />
+            <NavButton btnText="Watch" />
+        </nav>
     )
 }
 export default LeftNav;

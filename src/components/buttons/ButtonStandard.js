@@ -6,7 +6,6 @@ const ButtonStandard = props => {
         <button style={styles.btn}>
             {props.btnText}
         </button>
-
     )
 }
 export default ButtonStandard

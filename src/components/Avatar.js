@@ -13,5 +13,5 @@ const styles = {
         height: '5rem',
         cursor: 'pointer',
         borderRadius: '50%'
-   }
+    }
 }
