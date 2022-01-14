@@ -1,27 +1,25 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
-//standard button component
+//outline button component
 const ButtonOutline = props => {
     return (
-        <button style={styles.btnOutline}>
+        <Outline>
             {props.btnText}
-        </button>
+        </Outline>
 
     )
 }
 export default ButtonOutline
 
-const styles = {
-    btnOutline: {
-        background: 'transparent',
-        color: 'rgba(126, 217, 87, 1)',
-        fontSize: '1.5rem',
-        fontWeight: '700',
-        textTransform: 'uppercase',
-        padding: '1% 2.25%',
-        borderRadius: '5px',
-        border: '2px solid rgba(247, 100, 107, 1)',
-        cursor: 'pointer'
-    }
- 
-}
+const Outline = styled.button`
+    height: 5.5rem;
+    width: 12rem;
+    background: transparent;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgba(247, 100, 107, 1);
+    text-transform: uppercase;
+    border: 3px solid rgba(247, 100, 107, 1);
+    border-radius: 5px;
+`

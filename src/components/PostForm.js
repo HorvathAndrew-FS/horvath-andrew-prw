@@ -1,59 +1,67 @@
 import React from 'react';
-import ButtonOutline from '../components/buttons/ButtonOutline';
+import Button from './buttons/ButtonOutline'
+import styled from 'styled-components';
 
 const PostForm = props => {
     return (
-        <form style={styles.postForm}>
-            <div style={styles.formTitle}>
-                <h3 style={styles.formH3}>Create Post</h3>
+        <StyleComp>
+            <form>
+           <input placeholder="Create Post" />
+        
+            <div>
+                <textarea placeholder="What's Your Boggle?" />
+                <div>
+                    <Button btnText="Post" />
+                </div>
             </div>
-            <div style={styles.containerTitle}>
-                <input style={styles.input} placeholder="first name" />
-            </div>
-            <div style={styles.containerDescription}>
-                <textarea style={styles.textarea} cols="30" rows="15" placeholder="enter post content here" />
-            </div>
-            <div style={styles.btnWrap}>
-                <ButtonOutline btnText="Submit" />
-            </div>
-        </form>
+            </form>
+        </StyleComp>
+
     )
 };
 export default PostForm;
 
-const styles = {
-    postForm: {
-        background: 'rgba(37, 68, 65, 1)',
-        color: 'rgba(37, 68, 65, 1)',
-        padding: '.75rem 1.5rem',
-        borderRadius: '.5rem',
-        marginTop: '1rem',
-    },
-    formTitle: {
-        fontSize: '1.6rem',
-    },
-    formH3: {
-        fontSize: '2.5rem',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-        color: 'rgba(126, 217, 87, 1)'
-    },
-    input: {
-        width: '100%',
-        padding: '1rem',
-        background: 'rgba(255, 235, 245, 1)',
-        fontSize: '1.6rem',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-        color: 'rgba(247, 100, 107, 1)'
-    },
-    textarea: {
-        padding: '1rem',
-        background: 'rgba(255, 235, 245, 1)',
-        fontSize: '1.6rem',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-        color: 'rgba(247, 100, 107, 1)',
-        marginBottom: '2rem',
-    },
-}
+const StyleComp = styled.div`
+    width: 100%;
+    color: rgba(37, 68, 65, 1);
+    padding: 2rem;
+    margin: 1rem 0 0 0;
+`;
+
+// const styles = {
+//     postForm: {
+//         background: 'rgba(37, 68, 65, 1)',
+//         color: 'rgba(37, 68, 65, 1)',
+//         padding: '2rem',
+//         borderRadius: '.5rem',
+        
+//     },
+//     input: {
+//         width: '90%',
+//         padding: '1.5rem',
+//         marginBottom: '0 auto 1rem',
+//         background: 'rgba(255, 235, 245, 1)',
+//         fontSize: '1.6rem',
+//         fontWeight: 'bold',
+//         textTransform: 'uppercase',
+//         color: 'rgba(247, 100, 107, 1)'
+//     },
+//     contentAndBtn: {
+//         // border: 'none',
+//         display: 'flex',
+//         flexDirection: 'row',
+//         justifyContent: 'center',
+//         width: '90%',
+//     },
+//     textarea: {
+//         width: '90%',
+//         padding: '1rem',
+//         background: 'red',
+//         border: 'none',
+//         fontSize: '1.6rem',
+//         fontWeight: 'bold',
+//         textTransform: 'uppercase',
+//         color: 'rgba(255, 235, 245, 1)',
+//         marginBottom: '1rem',
+//     },
+// }
