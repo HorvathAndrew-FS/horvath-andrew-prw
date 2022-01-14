@@ -13,13 +13,17 @@ const ButtonOutline = props => {
 export default ButtonOutline
 
 const Outline = styled.button`
-    height: 5.5rem;
+    height: 4.5rem;
     width: 12rem;
     background: transparent;
     font-size: 1.6rem;
     font-weight: 700;
-    color: rgba(247, 100, 107, 1);
+    color: rgba(37, 68, 65, 1);
     text-transform: uppercase;
-    border: 3px solid rgba(247, 100, 107, 1);
+    border: 3px solid rgba(37, 68, 65, 1);
     border-radius: 5px;
+
+    &:hover {
+        background: rgba(126, 217, 87, 1);
+    }
 `

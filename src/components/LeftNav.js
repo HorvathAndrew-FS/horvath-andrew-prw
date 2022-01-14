@@ -14,8 +14,9 @@ export default LeftNav;
 
 const styles = {
     leftNavContainer: {
+        height: '23rem',
         display: 'flex',
         flexDirection: 'column',
-        padding: 30,
+        justifyContent: 'space-between',
     }
 }

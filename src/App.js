@@ -24,9 +24,10 @@ class App extends Component {
       <div>
         <MainHeader />
           <div style={styles.container}>
-            <aside styles={styles.leftNav}>
+            <aside style={styles.leftNav}>
                 <LeftSideNav />
             </aside>
+
                 <PostForm />
 
                 <aside style={styles.ads}>
@@ -53,12 +54,18 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'space-between',
     background: 'rgba(255, 235, 245, 1)',
   },
   leftNav: {
-    
+    width: '20%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingTop: 20,
+
   },
   ads: {
-
+    paddingRight: 10,
   }
 }
