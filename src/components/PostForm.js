@@ -23,13 +23,6 @@ const PostForm = props => {
 export default PostForm;
 
 const StyleComp = styled.div`
-    width: 60%;
-    background: rgba(37, 68, 65, 1);
-    color: rgba(37, 68, 65, 1);
-    padding: 2rem;
-    margin: 1rem 3rem 0 0;
-    border-radius: .75rem;
-
     form {
         width: 100%;
         background: rgba(67, 170, 139, 1);
@@ -37,8 +30,9 @@ const StyleComp = styled.div`
     }
     input {
         width: 100%;
-        padding: 2rem;
+        padding: 1rem;
         margin: 0 0 1rem 0;
+        font-size: 3rem;
     }
     input::placeholder {
         font-size: 2rem;
@@ -52,11 +46,15 @@ const StyleComp = styled.div`
         background: none;
         font-size: 3rem;
         color: rgba(255, 235, 245, 1);
+        resize: none;
     }
     textarea::placeholder {
         color: rgba(37, 68, 65, 1);
         font-size: 3rem;
         line-height: 8rem;
+    }
+    textarea:focus {
+        outline: none;
     }
     .form-group {
         display: flex;

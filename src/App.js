@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 
-//images
-// import AvatarIcon from '../src/images/AvatarAndrew.jpg';
-// import Avatar from '../src/components/Avatar';
 //header
 import MainHeader from './components/MainHeader'
 
 //form
 import PostForm from './components/PostForm';
-
+//posts or cards
+import MyPosts from './components/PostArticle';
 
 //ads
 import MyAd from './components/MyAd';
@@ -19,6 +17,13 @@ import Tech from './images/tech-gadgets.jpg';
 import LeftSideNav from './components/LeftNav';
 
 class App extends Component {
+  state = {
+    databinding: ''
+  }
+  changeInputText = e => {
+    this.setState({databinding: e.target.value})
+  }
+
   render() {
     return (
       <div>
@@ -28,7 +33,19 @@ class App extends Component {
                 <LeftSideNav />
             </aside>
 
-                <PostForm />
+              <section style={styles.postSection}>
+                  <PostForm />
+                  <MyPosts />
+              </section>
+
+                <section style={styles.row}>
+                  <form>
+                    <input type='text' style={styles.input}
+                    onChange={this.changeInputText}
+                    placeholder="Search" />
+                    <p>New Item: {this.state.databinding}</p>
+                  </form>
+                </section>
 
                 <aside style={styles.ads}>
                   <MyAd articleImg={Sprouts} articleAlt="This is my alt tag for brussel sprouts!!"
@@ -56,6 +73,14 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     background: 'rgba(255, 235, 245, 1)',
+  },
+  postSection: {
+    width: '60%',
+    background: 'rgba(37, 68, 65, 1)',
+    color: 'rgba(37, 68, 65, 1)',
+    padding: '2rem',
+    margin: '1rem 3rem 0 0',
+    borderRadius: '.75rem',
   },
   leftNav: {
     width: '20%',
