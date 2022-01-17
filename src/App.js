@@ -46,6 +46,14 @@ class App extends Component {
   getInput = e => {
     this.setState({pName: e.target.value})
   }
+  
+  addItem = e => {
+    e.preventDefault();
+    this.setState({
+      pList: [...this.state.pList,{pName:this.state.pName}]
+    });
+    e.target.reset();
+  }
 
   render() {
 
