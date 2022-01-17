@@ -18,10 +18,18 @@ import LeftSideNav from './components/LeftNav';
 
 class App extends Component {
   state = {
-    databinding: ''
-  }
-  changeInputText = e => {
-    this.setState({databinding: e.target.value})
+    pList: [{
+      pName: 'I Love Mushrooms',
+      pDesc: 'They are amazing sauteed with butter, garlic and fresh herbs! However, this is a toadstool and you probably shouldn&#39;t eat it.',
+      pImg: Mushroom,
+      pAlt: "Mushrooms on plate that has a color. They have been cooked."
+    },
+    {
+      pName: 'Moon Walkin&#39',
+      pDesc: 'zmix tapes, hair bands and Michael Jackson...those were the days!',
+      pImg: Walkman,
+      pAlt: "Its a walkmann with headphones. It's old so you may not know what it is anyways"
+    }]
   }
 
   render() {
@@ -35,17 +43,7 @@ class App extends Component {
 
               <section style={styles.postSection}>
                   <PostForm />
-                  <MyPosts />
               </section>
-
-                <section style={styles.row}>
-                  <form>
-                    <input type='text' style={styles.input}
-                    onChange={this.changeInputText}
-                    placeholder="Search" />
-                    <p>New Item: {this.state.databinding}</p>
-                  </form>
-                </section>
 
                 <aside style={styles.ads}>
                   <MyAd articleImg={Sprouts} articleAlt="This is my alt tag for brussel sprouts!!"
