@@ -19,7 +19,6 @@ import Tech from './images/tech-gadgets.jpg';
 //left side
 import LeftSideNav from './components/LeftNav';
 import PostArticle from './components/PostArticle';
-import { FaThemeisle } from 'react-icons/fa';
 
 class App extends Component {
   state = {
@@ -43,16 +42,26 @@ class App extends Component {
     }]
   }
 
+  //getting the user input values from the form
   getInput = e => {
-    this.setState({pName: e.target.value})
-  }
+    this.setState({...this.props, [e.target.name]: e.target.value});
+  };
   
+  //add item function
   addItem = e => {
     e.preventDefault();
     this.setState({
-      pList: [...this.state.pList,{pName:this.state.pName}]
+      pList: [...this.state.pList,{pName:this.state.pName, pText: this.state.pText, pImg: this.state.pImg}]
     });
     e.target.reset();
+  }
+
+  //delete item function
+  removeItem = key => {
+    const newpList = [...this.state.pList];
+    this.setState(() => ({
+      pList: newpList
+    }));
   }
 
   render() {

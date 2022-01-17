@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from './buttons/ButtonOutline';
 import AvatarImageURL from '../images/AvatarAndrew.svg';
 import Avatar from '../components/Avatar';
-import { GiPropellerBeanie } from 'react-icons/gi';
+
 
 
 const PostForm = props => {
