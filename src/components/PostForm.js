@@ -27,6 +27,7 @@ const StyleComp = styled.div`
         width: 100%;
         background: rgba(67, 170, 139, 1);
         padding: 2rem;
+        box-shadow: 0 4px 8px rgba(255, 235, 245, .2) 0 6px 20px 0 rgba(255, 235, 245, .3);
     }
     input {
         width: 100%;
@@ -61,41 +62,3 @@ const StyleComp = styled.div`
         align-items: center;
     }
 `;
-
-// const styles = {
-//     postForm: {
-//         background: 'rgba(37, 68, 65, 1)',
-//         color: 'rgba(37, 68, 65, 1)',
-//         padding: '2rem',
-//         borderRadius: '.5rem',
-        
-//     },
-//     input: {
-//         width: '90%',
-//         padding: '1.5rem',
-//         marginBottom: '0 auto 1rem',
-//         background: 'rgba(255, 235, 245, 1)',
-//         fontSize: '1.6rem',
-//         fontWeight: 'bold',
-//         textTransform: 'uppercase',
-//         color: 'rgba(247, 100, 107, 1)'
-//     },
-//     contentAndBtn: {
-//         // border: 'none',
-//         display: 'flex',
-//         flexDirection: 'row',
-//         justifyContent: 'center',
-//         width: '90%',
-//     },
-//     textarea: {
-//         width: '90%',
-//         padding: '1rem',
-//         background: 'red',
-//         border: 'none',
-//         fontSize: '1.6rem',
-//         fontWeight: 'bold',
-//         textTransform: 'uppercase',
-//         color: 'rgba(255, 235, 245, 1)',
-//         marginBottom: '1rem',
-//     },
-// }

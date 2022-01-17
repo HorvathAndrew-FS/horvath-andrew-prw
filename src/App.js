@@ -19,18 +19,19 @@ import Tech from './images/tech-gadgets.jpg';
 //left side
 import LeftSideNav from './components/LeftNav';
 import PostArticle from './components/PostArticle';
+import { FaThemeisle } from 'react-icons/fa';
 
 class App extends Component {
   state = {
     pList: [{
-      pName: 'I Love Mushrooms',
-      pText: 'They are amazing sauteed with butter, garlic and fresh herbs! However, this is a toadstool and you probably shouldn&#39;t eat it.',
+      pName: 'I Love Mushrooms!!',
+      pText: 'They are amazing sauteed with butter, garlic and fresh herbs! However, this is a toadstool and you probably shouldnt eat it.',
       pImg: Mushroom,
       pAlt: "Mushrooms on plate that has a color. They have been cooked."
     },
     {
-      pName: 'Moon Walkin&#39',
-      pText: 'Mix tapes, hair bands and Michael Jackson...those were the days!',
+      pName: 'Moon Walkin',
+      pText: 'Mix tapes, hair bands and Michael Jackson ...those were the days!',
       pImg: Walkmann,
       pAlt: "Its a walkmann with headphones. It's old so you may not know what it is anyways"
     },
@@ -40,6 +41,10 @@ class App extends Component {
       pImg: Stormtroopers,
       pAlt: "It's stormtroopers and someone gave them a power supply. Everyone look out."
     }]
+  }
+
+  getInput = e => {
+    this.setState({pName: e.target.value})
   }
 
   render() {
@@ -56,7 +61,10 @@ class App extends Component {
             </aside>
 
               <section style={styles.postSection}>
-                  <PostForm />
+                  <PostForm 
+                  getInput={this.getInput}
+                  addItem={this.addItem}
+                  btnText="Post" />
                   {postList}
               </section>
 
@@ -88,10 +96,10 @@ const styles = {
     background: 'rgba(255, 235, 245, 1)',
   },
   postSection: {
-    width: '60%',
+    width: '75%',
     background: 'rgba(37, 68, 65, 1)',
     color: 'rgba(37, 68, 65, 1)',
-    padding: '2rem',
+    padding: '3rem',
     margin: '1rem 3rem 0 0',
     borderRadius: '.75rem',
   },
@@ -100,7 +108,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: 20,
+    paddingTop: 10,
 
   },
   ads: {
