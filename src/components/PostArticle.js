@@ -5,9 +5,9 @@ import MyBtn from './buttons/ButtonStandard';
 const PostArticle = props => {
     return (
         <article style={styles.myPostArticle}>
-            <img src={props.value.pImg} alt={props.value.pAlt} />
-                <h2>{props.value.pName}</h2>
-                    <p>{props.value.pText}</p>
+            <img style={styles.postImg} src={props.val.pImg} alt={props.val.pAlt} />
+                <h2>{props.val.pName}</h2>
+                    <p>{props.val.pText}</p>
 
                     <div style={styles.buttons}>
                         <MyBtn btnText='edit' />
@@ -21,7 +21,17 @@ const PostArticle = props => {
 export default PostArticle;
 
 const styles = {
+    myPostArticle : {
+    margin: '1rem 0 0 0',
     width: '100%',
-    background: '0rgba(67, 170, 139, 1)',
+    background: 'rgba(67, 170, 139, 1)',
     padding: '2rem',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    color: 'white',
+    },
+    postImg: {
+        width: '300px',
+    }
 }

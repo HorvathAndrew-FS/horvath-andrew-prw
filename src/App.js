@@ -5,8 +5,11 @@ import MainHeader from './components/MainHeader'
 
 //form
 import PostForm from './components/PostForm';
-//posts or cards
-import MyPosts from './components/PostArticle';
+//List images
+import Mushroom from '../src/images/mushroom.jpg';
+import Walkmann from '../src/images/walkmann.jpg';
+import Stormtroopers from '../src/images/stormtroopers.jpg';
+
 
 //ads
 import MyAd from './components/MyAd';
@@ -15,24 +18,35 @@ import Tech from './images/tech-gadgets.jpg';
 
 //left side
 import LeftSideNav from './components/LeftNav';
+import PostArticle from './components/PostArticle';
 
 class App extends Component {
   state = {
     pList: [{
       pName: 'I Love Mushrooms',
-      pDesc: 'They are amazing sauteed with butter, garlic and fresh herbs! However, this is a toadstool and you probably shouldn&#39;t eat it.',
+      pText: 'They are amazing sauteed with butter, garlic and fresh herbs! However, this is a toadstool and you probably shouldn&#39;t eat it.',
       pImg: Mushroom,
       pAlt: "Mushrooms on plate that has a color. They have been cooked."
     },
     {
       pName: 'Moon Walkin&#39',
-      pDesc: 'zmix tapes, hair bands and Michael Jackson...those were the days!',
-      pImg: Walkman,
+      pText: 'Mix tapes, hair bands and Michael Jackson...those were the days!',
+      pImg: Walkmann,
       pAlt: "Its a walkmann with headphones. It's old so you may not know what it is anyways"
+    },
+    {
+      pName: 'Be Advised!',
+      pText: 'The Stromtroopers have begun work on the power supply for the new and improved Death Star...',
+      pImg: Stormtroopers,
+      pAlt: "It's stormtroopers and someone gave them a power supply. Everyone look out."
     }]
   }
 
   render() {
+
+    let postList = this.state.pList.map((element, i) =>{
+      return <PostArticle key={i} val={element} />
+    })
     return (
       <div>
         <MainHeader />
@@ -43,6 +57,7 @@ class App extends Component {
 
               <section style={styles.postSection}>
                   <PostForm />
+                  {postList}
               </section>
 
                 <aside style={styles.ads}>
