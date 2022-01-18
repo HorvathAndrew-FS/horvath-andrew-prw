@@ -39,7 +39,15 @@ class App extends Component {
       pText: 'The Stromtroopers have begun work on the power supply for the new and improved Death Star...',
       pImg: Stormtroopers,
       pAlt: "It's stormtroopers and someone gave them a power supply. Everyone look out."
-    }]
+    }],
+    color: 'rgba(255, 235, 245, 1)',
+  }
+
+  //lifecycle
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({color: 'rgba(126, 217, 87, 1)'});
+    }, 5000);
   }
 
   //getting the user input values from the form
@@ -80,6 +88,7 @@ class App extends Component {
             </aside>
 
               <section style={styles.postSection}>
+                  <h1 style={{color: this.state.color, textTransform: 'uppercase', fontSize: '5rem', marginBottom: '2rem', textAlign: 'center'}}>Welcome to Mango Digital</h1>
                   <PostForm 
                   getInput={this.getInput}
                   addItem={this.addItem}
