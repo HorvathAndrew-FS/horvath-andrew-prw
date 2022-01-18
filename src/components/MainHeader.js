@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { GoSettings } from "react-icons/go";
 import { BsSearch } from "react-icons/bs";
@@ -22,8 +23,8 @@ const MainHeader = props => {
                 placeholder="Search" />
             </div>
             <nav style={styles.rightNav}>
-                <button style={styles.rightNavIcons}><GoSettings /></button>
-                <button style={styles.rightNavIcons}><GiSquirrel /></button>
+                <NavIcons><GoSettings /></NavIcons>
+                <NavIcons><GiSquirrel /></NavIcons>
                 <Avatar AvatarIcon={AvatarImageURL} />
             </nav>
         </header>
@@ -85,13 +86,16 @@ const styles = {
         alignItems: 'center',
         marginRight: '2%',
     },
-    rightNavIcons: {
-        padding: '0',
-        fontSize: '3rem',
-        background: 'none',
-        border: 'none',
-        marginRight: '2rem',
-        color: 'rgba(247, 100, 107, 1)',
-    }
-
 }
+
+const NavIcons = styled.button`
+        padding: 0;
+        font-size: 4rem;
+        background: none;
+        border: none;
+        margin-right: 2rem;
+        color: rgba(247, 100, 107, 1);
+        &:hover {
+            color: rgba(126, 217, 87, 1);
+        }
+`

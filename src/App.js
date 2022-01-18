@@ -88,7 +88,8 @@ class App extends Component {
             </aside>
 
               <section style={styles.postSection}>
-                  <h1 style={{color: this.state.color, textTransform: 'uppercase', fontSize: '5rem', marginBottom: '2rem', textAlign: 'center'}}>Welcome to Mango Digital</h1>
+                  <h1 style={{color: this.state.color, textTransform: 'uppercase', fontSize: '5rem', marginBottom: '2rem', textAlign: 'center', fontFamily: 'Montserrat'}}>
+                    Welcome to Mango Digital</h1>
                   <PostForm 
                   getInput={this.getInput}
                   addItem={this.addItem}
