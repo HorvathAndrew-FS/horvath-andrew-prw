@@ -21,7 +21,7 @@ const PostArticle = props => {
 
                     <div style={styles.buttons}>
                         <PostIcons><FaEdit /></PostIcons>
-                        <PostIcons><RiDeleteBin6Line /></PostIcons>
+                        <PostIcons><RiDeleteBin6Line onClick={props.deleteItem} /></PostIcons>
                     </div>
         </article>
 

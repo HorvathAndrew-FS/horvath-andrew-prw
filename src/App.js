@@ -57,17 +57,19 @@ class App extends Component {
   }
 
   //delete item function
-  removeItem = key => {
-    const newpList = [...this.state.pList];
-    this.setState(() => ({
-      pList: newpList
-    }));
+
+  removeItem = (id) => {
+    const newList = this.state.pList.filter((item) => item.pName !== id.pName );
+    this.setState({pList:newList});
   }
 
   render() {
 
     let postList = this.state.pList.map((element, i) =>{
-      return <PostArticle key={i} val={element} />
+      return <PostArticle
+                key={i}
+                val={element}
+                deleteItem={() => this.removeItem(element)} />
     })
     return (
       <div>
