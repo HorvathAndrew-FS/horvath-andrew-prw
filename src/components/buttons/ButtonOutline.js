@@ -7,7 +7,6 @@ const ButtonOutline = props => {
         <Outline>
             {props.btnText}
         </Outline>
-
     )
 }
 export default ButtonOutline

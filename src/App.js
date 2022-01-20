@@ -10,7 +10,6 @@ import Mushroom from '../src/images/mushroom.jpg';
 import Walkmann from '../src/images/walkmann.jpg';
 import Stormtroopers from '../src/images/stormtroopers.jpg';
 
-
 //ads
 import MyAd from './components/MyAd';
 import Sprouts from './images/sprouts.jpg';
@@ -65,7 +64,6 @@ class App extends Component {
   }
 
   //delete item function
-
   removeItem = (id) => {
     const newList = this.state.pList.filter((item) => item.pName !== id.pName );
     this.setState({pList:newList});
