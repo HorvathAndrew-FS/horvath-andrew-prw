@@ -1,15 +1,15 @@
 import React from 'react';
 
-function Dashboard() {
+function ReportsChart() {
     return (
         <section style={styles.container}>
-            <h1 style={styles.title}>Dashboard</h1>
-            <p style={styles.content}>place all of the charts here.</p>
+            <h1 style={styles.title}>Reports</h1>
+            <p style={styles.content}>Ummm...yeah...you need to fill out your TPS Reports in Triplicate. Oh and Peter, we're gonna need ya to come in Saturday too. Thanks.</p>
         </section>
     );
 }
 
-export default Dashboard;
+export default ReportsChart;
 
 const styles = {
     container: {

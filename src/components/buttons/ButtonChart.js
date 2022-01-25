@@ -14,17 +14,16 @@ export default ButtonStandard
 
 const Standard = styled.button`
     height: 5rem;
-    width: 15rem;
-    background: rgba(37, 68, 65, 1);
-    font-size: 2rem;
+    width: 5rem;
+    background: none;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: rgba(126, 217, 87, 1);
+    color: rgba(37, 68, 65, 1);
     text-transform: uppercase;
-    border: 1px solid rgba(37, 68, 65, 1);
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
 
     &:hover {
-        background: rgba(247, 100, 107, 1);
+        color: rgba(247, 100, 107, 1);
     }
 `

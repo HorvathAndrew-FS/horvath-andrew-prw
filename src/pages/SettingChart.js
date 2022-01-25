@@ -1,22 +1,20 @@
 import React from 'react';
 
-function Dashboard() {
+function SettingChart() {
     return (
         <section style={styles.container}>
-            <h1 style={styles.title}>Dashboard</h1>
-            <p style={styles.content}>place all of the charts here.</p>
+            <h1 style={styles.title}>Settings</h1>
+            <p style={styles.content}>This is where settings would be for the user to change.</p>
         </section>
     );
 }
 
-export default Dashboard;
+export default SettingChart;
 
 const styles = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh',
-        width: '100%',
     },
     title: {
         fontSize: '5rem',

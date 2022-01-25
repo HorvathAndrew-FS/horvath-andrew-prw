@@ -1,15 +1,15 @@
 import React from 'react';
 
-function Dashboard() {
+function ReportsChart() {
     return (
         <section style={styles.container}>
-            <h1 style={styles.title}>Dashboard</h1>
-            <p style={styles.content}>place all of the charts here.</p>
+            <h1 style={styles.title}>Spending</h1>
+            <p style={styles.content}>The user of this company has spent a lot of money!!</p>
         </section>
     );
 }
 
-export default Dashboard;
+export default ReportsChart;
 
 const styles = {
     container: {

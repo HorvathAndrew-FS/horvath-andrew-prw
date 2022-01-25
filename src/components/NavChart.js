@@ -1,22 +1,54 @@
 import React from 'react';
-import NavButton from './buttons/ButtonChart';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const LeftNav = props => {
+//navigation icons
+import { HiOutlineDocumentReport } from "react-icons/hi";
+import { MdDashboardCustomize, MdOutlineSavings  } from "react-icons/md";
+import { BsCashCoin } from "react-icons/bs";
+import { GiPayMoney } from "react-icons/gi";
+
+
+//avatar for settings buttons
+import AvatarImageURL from '../images/AvatarAndrew-sm.svg';
+import Avatar from './Avatar';
+
+const sideNav = props => {
     return (
-        <div style={styles.leftNavContainer}>
-        <NavButton btnText="Link 1" />
-        <NavButton btnText="Link 2" />
-        <NavButton btnText="Link 3" />
-        </div>
+        <nav style={styles.navContainer}>
+            <LinkStyled to="/settingChart">{<Avatar AvatarIcon={AvatarImageURL} />}</LinkStyled>
+            <LinkStyled to="/dashboard">{<MdDashboardCustomize /> }</LinkStyled>
+            <LinkStyled to="/reportsChart">{<HiOutlineDocumentReport />}</LinkStyled>
+            <LinkStyled to="/incomeChart">{<BsCashCoin />}</LinkStyled>
+            <LinkStyled to="/savingChart">{<MdOutlineSavings />}</LinkStyled>
+            <LinkStyled to="/spendingChart">{<GiPayMoney />}</LinkStyled>
+        </nav>
     )
 }
-export default LeftNav;
+export default sideNav;
 
 const styles = {
-    leftNavContainer: {
-        height: '25rem',
+    navContainer: {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        gap: '2rem',
+        padding: '1.5rem',
+        background: 'none',
     }
 }
+
+const LinkStyled = styled(Link)`
+    height: 5rem;
+    width: 5rem;
+    background: none;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(37, 68, 65, 1);
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(247, 100, 107, 1);
+    }
+`
