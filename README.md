@@ -22,3 +22,6 @@ For this weeks additions, they are:
 - A basic list array of elements to display as stored posts.
 - The ability to add and delete a post, either one of the stored posts or one created by the user.
 - A lifecycle timer to change the color of the main heading on the page after a certain amount of time.
+
+## Week Three - Using Hooks
+
