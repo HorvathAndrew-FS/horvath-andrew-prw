@@ -38,13 +38,14 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
+    padding: '0 1rem',
     background: 'rgba(255, 235, 245, 1)',
   },
   sectionContent: {
     width: '95%',
     background: 'rgba(37, 68, 65, 1)',
     color: 'rgba(255, 235, 245, 1)',
-    padding: '3rem',
+    padding: '5rem',
     borderRadius: '.75rem',
   },
   navLeft: {

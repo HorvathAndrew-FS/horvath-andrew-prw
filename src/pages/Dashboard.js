@@ -87,6 +87,7 @@ const styles = {
         fontSize: '5rem',
         textTransform: 'uppercase',
         color: 'rgba(126, 217, 87, 1)',
+        margin: '0 0 1rem 1rem',
     },
 
 }
