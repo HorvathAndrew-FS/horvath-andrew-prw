@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import ChartRadBar from '../components/chartCards/ChartRadBar';
-// import ChartMed from '../components/chartCards/ChartMed';
+import ChartArea from '../components/chartCards/ChartArea';
 import ChartHorz from '../components/chartCards/ChartHorz';
 
 function Dashboard() {
@@ -14,16 +14,16 @@ function Dashboard() {
         {chartHeader: 'Savings'},
         {chartHeader: 'Spending'}
     ]);
-    // const [chartMed] = useState([
-    //     {
-    //         chartHeader: 'Savings Overview',
-    //         chartsubHeader: 'Start Saving Today!'
-    //     },
-    //     {
-    //         chartHeader: 'Savings Overview',
-    //         chartsubHeader: 'Start Saving Today!'
-    //     }
-    // ]);
+    const [chartArea] = useState([
+        {
+            chartHeader: 'Savings Overview',
+            chartsubHeader: 'Start Saving Today!'
+        },
+        {
+            chartHeader: 'Savings Overview',
+            chartsubHeader: 'Start Saving Today!'
+        }
+    ]);
 
     return (
         <section style={styles.container}>
@@ -40,11 +40,11 @@ function Dashboard() {
                     <ChartRadBar key={id} id={id} chartradBar={chartradBar} />
                 ))}
             </p>
-            {/* <p style={styles.row}>
-                {chartMed.map ((chartMed, id) => (
-                    <ChartMed key={id} id={id} chartMed={chartMed} />
+            <p style={styles.row}>
+                {chartArea.map ((chartArea, id) => (
+                    <ChartArea key={id} id={id} chartArea={chartArea} />
                 ))}
-            </p> */}
+            </p>
         </section>
     );
 }
@@ -57,13 +57,13 @@ const styles = {
         flexDirection: 'column',
         width: '100%',
         fontFamily: 'Montserrat',
-        backgroundColor: 'red',
     },
     row: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
         gap: '1rem',
+        marginBottom: '3rem',
     },
     main: {
         display: 'flex',
