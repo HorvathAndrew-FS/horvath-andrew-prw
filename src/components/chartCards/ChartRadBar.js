@@ -1,16 +1,16 @@
 import React from 'react';
-import LineCharts from '../charts/HorzLineCharts';
+import RadBarCharts from '../charts/RadBarCharts';
 
-const ChartHorz = ({chartHorz}) => {
+const ChartRadBar = ({chartradBar}) => {
     return (
-        <article key={chartHorz.id} style={styles.card}>
-            <h1 style={styles.title}>{chartHorz.chartHeader}</h1>
-            <LineCharts />
+        <article key={chartradBar.id} style={styles.card}>
+            <h1 style={styles.title}>{chartradBar.chartHeader}</h1>
+            <RadBarCharts />
         </article>
     )
 };
 
-export default ChartHorz;
+export default ChartRadBar;
 
 const styles = {
     card: {

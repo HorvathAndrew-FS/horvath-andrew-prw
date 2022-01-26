@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import ChartSmall from '../components/chartCards/ChartSmall';
+import ChartRadBar from '../components/chartCards/ChartRadBar';
 // import ChartMed from '../components/chartCards/ChartMed';
 import ChartHorz from '../components/chartCards/ChartHorz';
 
@@ -9,11 +9,11 @@ function Dashboard() {
         {chartHeader: 'Income Overview'},
         {chartHeader: 'Savings Overview'}
     ]);
-    // const [chartSmall] = useState([
-    //     {chartHeader: 'Income'},
-    //     {chartHeader: 'Savings'},
-    //     {chartHeader: 'Spending'}
-    // ]);
+    const [chartradBar] = useState([
+        {chartHeader: 'Income'},
+        {chartHeader: 'Savings'},
+        {chartHeader: 'Spending'}
+    ]);
     // const [chartMed] = useState([
     //     {
     //         chartHeader: 'Savings Overview',
@@ -35,12 +35,12 @@ function Dashboard() {
                     <ChartHorz key={id} id={id} chartHorz={chartHorz} />
                 ))}
             </p>
-            {/* <p style={styles.row}>
-                {chartSmall.map ((chartSmall, id) =>(
-                    <ChartSmall key={id} id={id} charSmall={chartSmall} />
+            <p style={styles.row}>
+                {chartradBar.map ((chartradBar, id) =>(
+                    <ChartRadBar key={id} id={id} chartradBar={chartradBar} />
                 ))}
             </p>
-            <p style={styles.row}>
+            {/* <p style={styles.row}>
                 {chartMed.map ((chartMed, id) => (
                     <ChartMed key={id} id={id} chartMed={chartMed} />
                 ))}
@@ -55,18 +55,15 @@ const styles = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh',
         width: '100%',
         fontFamily: 'Montserrat',
-    },
-    col: {
-        display: 'flex',
-        flexDirection: 'column',
+        backgroundColor: 'red',
     },
     row: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
+        gap: '1rem',
     },
     main: {
         display: 'flex',
@@ -82,6 +79,7 @@ const styles = {
     chartHorz: {
         display: 'flex',
         flexDirection: 'row',
+        marginBottom: '3rem',
     },
     title: {
         fontSize: '5rem',
