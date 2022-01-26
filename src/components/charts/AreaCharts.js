@@ -1,5 +1,5 @@
 import React from "react";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 const data = [
   {
@@ -64,9 +64,11 @@ const off = gradientOffset();
 
 const AreaCharts = () =>  {
   return (
+  <div style={{width: '100%', height:250}}>
+    <ResponsiveContainer>
     <AreaChart
-      width={500}
-      height={400}
+      // width={600}
+      // height={400}
       data={data}
       margin={{
         top: 10,
@@ -92,6 +94,9 @@ const AreaCharts = () =>  {
         fill="url(#splitColor)"
       />
     </AreaChart>
+    </ResponsiveContainer>
+    </div>
+ 
   )
 };
 

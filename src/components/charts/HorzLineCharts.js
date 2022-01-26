@@ -1,6 +1,6 @@
 
 import React from "react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 const data = [
   {
@@ -43,9 +43,9 @@ const data = [
 
 const HorzLineCharts = () =>  {
   return (
+    <div style={{width: '100%', height: 300}}>
+      <ResponsiveContainer>
     <LineChart
-      width={750}
-      height={300}
       data={data}
       margin={{
         top: 5,
@@ -69,6 +69,8 @@ const HorzLineCharts = () =>  {
       />
       <Line yAxisId="right" type="monotone" dataKey="uv" stroke="rgba(247, 100, 107, 1)" />
     </LineChart>
+    </ResponsiveContainer>
+    </div>
   )
 };
 

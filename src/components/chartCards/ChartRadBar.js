@@ -16,11 +16,11 @@ const styles = {
     card: {
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
         transition: '0.3s',
-        minHeight: '100%',
         background: '#fff',
         margin: '1rem',
         padding: '1rem',
-        width: '50%',
+        width: '100%',
+        // height: '100%',
         color: 'rgba(37, 68, 65, 1)',
         fontSize: '1.6rem',
     },

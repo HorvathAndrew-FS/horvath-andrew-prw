@@ -64,6 +64,8 @@ const styles = {
         justifyContent: 'space-around',
         gap: '1rem',
         marginBottom: '3rem',
+        width: '100%',
+        height: '100%',
     },
     main: {
         display: 'flex',
@@ -77,6 +79,8 @@ const styles = {
         justifyContent: 'space-between',
     },
     chartHorz: {
+        width: '100%',
+        height: '100%',
         display: 'flex',
         flexDirection: 'row',
         marginBottom: '3rem',
