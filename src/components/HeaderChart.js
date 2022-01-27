@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
 import { CgNotifications } from "react-icons/cg";
 import { BsSearch } from "react-icons/bs";
 import AvatarImageURL from '../images/AvatarAndrew-sm.svg';
 import Avatar from './Avatar';
 import Logo from '../images/digitalLogo.jpg';
 
-const MainHeader = props => {
+const MainHeader = () => {
     return (
         <header style={styles.mainHeader}>
             <div style={styles.logoWrapper}>

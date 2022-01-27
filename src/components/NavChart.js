@@ -8,7 +8,6 @@ import { MdDashboardCustomize, MdOutlineSavings  } from "react-icons/md";
 import { BsCashCoin } from "react-icons/bs";
 import { GiPayMoney } from "react-icons/gi";
 
-
 //avatar for settings buttons
 import AvatarImageURL from '../images/AvatarAndrew-sm.svg';
 import Avatar from './Avatar';

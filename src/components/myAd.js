@@ -6,8 +6,7 @@ const MyAd = props => {
             <img src={props.articleImg} alt={props.articleAlt} />
             <h1 style={styles.articleTitle}>{props.articleTitle}</h1>
             <h2 style={styles.articleStatement}>{props.articleStatement}</h2>
-            <p style={styles.articleText}>{props.articleText}
-            </p>
+            <p style={styles.articleText}>{props.articleText}</p>
             <div style={styles.buttons}>
                 <button type="submit" style={styles.cardButton}>Share</button>
                 <button type="submit" style={styles.cardButton}>More Stuff</button>

@@ -7,8 +7,8 @@ import { GiSquirrel } from "react-icons/gi";
 import AvatarImageURL from '../images/AvatarAndrew-sm.svg';
 import Avatar from '../components/Avatar';
 import Logo from '../images/digitalLogo.jpg';
-
-const MainHeader = props => {
+//If your not passing through props you can leave it empty.
+const MainHeader = () => {
     return (
         <header style={styles.mainHeader}>
             <div style={styles.logoWrapper}>

@@ -5,26 +5,22 @@ import styled from 'styled-components';
 import { FaEdit } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-
-
 const PostArticle = props => {
     return (
         <article style={styles.myPostArticle}>
             <img style={styles.postImg} src={props.val.pImg} alt={props.val.pAlt} />
-                <div style={styles.content}>
-                    <div style={styles.titleGroup}>
-                        <Avatar AvatarIcon={AvatarImageURL} />
-                        <h2 style={styles.postTitle}>{props.val.pName}</h2>
-                    </div>
-                        <p style={styles.postText}>{props.val.pText}</p>
-                    </div>
-
-                    <div style={styles.buttons}>
-                        <PostIcons><FaEdit /></PostIcons>
-                        <PostIcons><RiDeleteBin6Line onClick={props.deleteItem} /></PostIcons>
-                    </div>
+            <div style={styles.content}>
+                <div style={styles.titleGroup}>
+                    <Avatar AvatarIcon={AvatarImageURL} />
+                    <h2 style={styles.postTitle}>{props.val.pName}</h2>
+                </div>
+                <p style={styles.postText}>{props.val.pText}</p>
+            </div>
+            <div style={styles.buttons}>
+                <PostIcons><FaEdit /></PostIcons>
+                <PostIcons><RiDeleteBin6Line onClick={props.deleteItem} /></PostIcons>
+            </div>
         </article>
-
     )
 }
 

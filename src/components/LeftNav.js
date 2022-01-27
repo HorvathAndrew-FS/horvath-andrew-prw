@@ -1,7 +1,7 @@
 import React from 'react';
 import NavButton from './buttons/ButtonStandard';
-
-const LeftNav = props => {
+//If you are not using props you can leave it empty.
+const LeftNav = () => {
     return (
         <div style={styles.leftNavContainer}>
         <NavButton btnText="News Feed" />
