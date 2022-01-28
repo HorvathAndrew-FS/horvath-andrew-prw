@@ -7,6 +7,7 @@ const UserForm = props => {
             <p>{props.username}</p>
             <p>{props.firstName}</p>
             <p>{props.lastName}</p>
+            <p>{props.address}</p>
         </article>
     )
 }

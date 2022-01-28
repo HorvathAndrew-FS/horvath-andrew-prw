@@ -16,10 +16,18 @@ function App() {
       })
       .then(data => {
         setUserData(data.results.map(user => ({
-          username: `${user.login.username}`,
+          picture: `${user.picture.medium}`,
           firstName: `${user.name.first}`,
           lastName: `${user.name.last}`,
-          picture: `${user.picture.medium}`
+          emailAddress: `${user.email}`,
+          phoneNumber: `${user.cell}`,
+          address: `${user.location.street.number} ${user.location.street.name}`,
+          city: `${user.location.city}`,
+          userState: `${user.location.state}`,
+          zipCode: `${user.location.postcode}`,
+          country: `${user.location.country}`,
+          username: `${user.login.username}`,
+          password: `${user.login.password}`,
         })));
       })
       .finally(() => {
@@ -37,8 +45,8 @@ function App() {
       <h1>Settings</h1>
       <h2 style={styles.h2}>{loading}</h2>
         {!loading && userData.length > 0 ? userData.map(user => {
-          const {firstName, lastName, username, picture} = user;
-          return <UserForm key={username} username={username} firstName={firstName} lastName={lastName} img={picture} alt="this is a user photo" />
+          const {firstName, lastName, username, picture, address} = user;
+          return <UserForm key={username} username={username} firstName={firstName} lastName={lastName} img={picture} alt="this is a user photo" address={address}/>
         }) : null
       }
     </div>
