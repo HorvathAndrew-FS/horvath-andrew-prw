@@ -4,7 +4,7 @@ import UserForm from './components/UserForm';
 function App() {
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [err, setErr] = useState();
 
   useEffect(() => {
       fetch('https://randomuser.me/api/')
@@ -30,19 +30,23 @@ function App() {
           password: `${user.login.password}`,
         })));
       })
+      .catch ((err) => {
+        console.log("You're dumb app just caused an ERROR!!", err);
+        setErr(err);
+      })
       .finally(() => {
         setLoading(false);
       });
     }, []);
 
     if (loading) return "Loading...";
-    if (error) return "Error!";
+    if (err) return "Error!";
       
 
 
   return (
     <div>
-      <h1>Settings</h1>
+      <h1 style={styles.h1}>Settings</h1>
       <h2 style={styles.h2}>{loading}</h2>
         {!loading && userData.length > 0 ? userData.map(user => {
           const {firstName, lastName, username, picture, address} = user;
@@ -56,5 +60,12 @@ function App() {
 export default App;
 
 const styles = {
-
+  h2: {
+    fontSize: '2rem',
+    color: 'red',
+  },
+  h1: {
+    fontSize: '3rem',
+    color: 'blue',
+  }
 }
