@@ -1,56 +1,52 @@
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/HeaderChart';
-import Nav from './components/NavChart';
-import Dashboard from './pages/Dashboard';
-import ReportsChart from './pages/ReportsChart';
-import IncomeChart from './pages/IncomeChart';
-import SavingChart from './pages/SavingChart';
-import SpendingChart from './pages/SpendingChart';
-import Settings from './pages/SettingChart';
+import React, { useState, useEffect } from 'react';
+import UserForm from './components/UserForm';
 
 function App() {
+  const [userData, setUserData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+      fetch('https://randomuser.me/api/')
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw response;
+      })
+      .then(data => {
+        setUserData(data.results.map(user => ({
+          username: `${user.login.username}`,
+          firstName: `${user.name.first}`,
+          lastName: `${user.name.last}`,
+          picture: `${user.picture.medium}`
+        })));
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+    }, []);
+
+    if (loading) return "Loading...";
+    if (error) return "Error!";
+      
+
+
   return (
     <div>
-      <Header />
-        <main style={styles.container}>
-          <Nav style={styles.navLeft} />
-            <section style={styles.sectionContent}>
-              <Routes>
-                <Route path='/' element={<Dashboard />} />
-                <Route path='settingChart' element={<Settings />} />
-                <Route path='dashboard' element={<Dashboard />} />
-                <Route path='reportsChart' element={<ReportsChart />} />
-                <Route path='incomeChart' element={<IncomeChart />} />
-                <Route path='savingChart' element={<SavingChart />} />
-                <Route path='spendingChart' element={<SpendingChart />} />
-
-              </Routes>
-            </section>
-        </main>
+      <h1>Settings</h1>
+      <h2 style={styles.h2}>{loading}</h2>
+        {!loading && userData.length > 0 ? userData.map(user => {
+          const {firstName, lastName, username, picture} = user;
+          return <UserForm key={username} username={username} firstName={firstName} lastName={lastName} img={picture} alt="this is a user photo" />
+        }) : null
+      }
     </div>
-  );
+  )
 }
 
 export default App;
 
 const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: '0 1rem',
-    background: 'rgba(255, 235, 245, 1)',
-  },
-  sectionContent: {
-    width: '95%',
-    background: 'rgba(37, 68, 65, 1)',
-    color: 'rgba(255, 235, 245, 1)',
-    padding: '5rem',
-    borderRadius: '.75rem',
-  },
-  navLeft: {
-    display: 'flex',
-    flexDirection: 'column',
-    paddingTop: 10,
-  },
+
 }
