@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import { FaEdit } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-
-
 const PostArticle = props => {
     return (
         <article style={styles.myPostArticle}>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import UserForm from './components/UserForm';
+import UserForm from '../components/UserForm';
 
 function UserSettings() {
    const [userData, setUserData] = useState([]);
@@ -16,11 +16,11 @@ function UserSettings() {
       })
       .then(data => {
         setUserData(data.results.map(user => ({
-          picture: `${user.picture.medium}`,
+          picture: `${user.picture.large}`,
           firstName: `${user.name.first}`,
           lastName: `${user.name.last}`,
           emailAddress: `${user.email}`,
-          phoneNumber: `${user.cell}`,
+          contactNumber: `${user.cell}`,
           address: `${user.location.street.number} ${user.location.street.name}`,
           city: `${user.location.city}`,
           userState: `${user.location.state}`,
@@ -39,27 +39,33 @@ function UserSettings() {
       });
     }, []);
 
-    if (loading) return "Loading...";
+    if (loading) return <p style={styles.loadingStyle}>'Loading...'</p>;
     if (err) return "Error!";
       
-
-
   return (
     <div>
-      <h1 style={styles.h1}>Settings</h1>
+      <h1 style={styles.title}>Settings</h1>
       <h2 style={styles.h2}>{loading}</h2>
         {!loading && userData.length > 0 ? userData.map(user => {
-          const {firstName, lastName, username, picture, address} = user;
-          return <UserForm key={username} username={username} firstName={firstName} lastName={lastName} img={picture} alt="this is a user photo" address={address}/>
+          const {picture, firstName, lastName, emailAddress, contactNumber, address, city, userState, zipCode, country, username, password} = user;
+          return <UserForm img={picture} alt="this is a user photo" firstName={firstName} lastName={lastName} emailAddress={emailAddress} 
+          contactNumber={contactNumber} address={address} city={city} userState={userState} zipCode={zipCode} country={country} username={username} 
+          password={password}/>
         }) : null
       }
     </div>
   )
 }
-
 export default UserSettings;
 
 const styles = {
+    loadingStyle: {
+        fontSize: '3rem',
+        color: 'red',
+    },
+    h1: {
+        fontSize: '3rem',
+    },
     container: {
         display: 'flex',
         flexDirection: 'column',
