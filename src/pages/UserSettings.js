@@ -61,7 +61,7 @@ export default UserSettings;
 const styles = {
     loadingStyle: {
         fontSize: '3rem',
-        color: 'red',
+        color: 'rgba(126, 217, 87, 1)',
     },
     h1: {
         fontSize: '3rem',

@@ -11,26 +11,23 @@ const UserForm = props => {
     };
     
     return (
-
+      <div style={styles.containerForm}>
+        <h1 style={styles.formTitle}>Edit User Profile</h1>
+        <p><img style={styles.userImage} src={props.img} alt={props.alt} /></p>
         
-
         <StyledForm>
-            <h1 style={styles.formTitle}>Edit User Profile</h1>
-
-            <p><img src={props.img} alt={props.alt} /></p>
-
         <fieldset class="name-items">
-            <div>
-              <label for="fname" style={styles.fName}>First</label>
+            <div container-inputs>
+              <label for="fname">First</label>
               <input value={props.firstName} type="text" name="fname"/>
             </div>
             <div>
-              <label for="lname" style={styles.lName}>Last</label>
+              <label for="lname">Last</label>
               <input value={props.lastName} type="text" name="lname" placeholder="Last"/>
             </div>
         </fieldset>
         
-        <fieldset>
+        <fieldset class="contact-items">
           <label for="email">Email</label>
           <input value={props.emailAddress} type="text" name="email"/>
           
@@ -38,22 +35,27 @@ const UserForm = props => {
           <input value={props.contactNumber} type="text" name="contact-number"/>
         </fieldset>
         
-        <fieldset>
+        <fieldset class="location-items">
+          <div>
           <label for="address">Address</label>
           <input value={props.address} type="text" name="address" placeholder="Street address" />
-          <input type="text" name="address" placeholder="Street address line 2" />
-
+          </div>
+          <div>
             <label for="city">City</label>
             <input value={props.city} type="text" name="city" placeholder="City" />
-
+            </div>
+            <div>
             <label for="state">State</label>
             <input value={props.userState} type="text" name="state" placeholder="State" />
-            
+            </div>
+            <div>            
             <label type="text" name="Zip Code">Zip Code</label>
             <input value={props.zipCode} type="text" name="name" placeholder="Postal / Zip code" />
-    
+            </div>
+            <div>
             <label for="country">Country</label>
             <input value={props.country} type="text" name="country" placeholder="Country" />
+            </div>
         </fieldset>
 
         <fieldset>
@@ -70,69 +72,111 @@ const UserForm = props => {
             </div>
         </fieldset>
 
-
-
-
-            {/* 
-            picture: `${user.picture.large}`,
-          firstName: `${user.name.first}`,
-          lastName: `${user.name.last}`,
-          emailAddress: `${user.email}`,
-          contactNumber: `${user.cell}`,
-          address: `${user.location.street.number} ${user.location.street.name}`,
-          city: `${user.location.city}`,
-          userState: `${user.location.state}`,
-          zipCode: `${user.location.postcode}`,
-          country: `${user.location.country}`,
-          username: `${user.login.username}`,
-          password: `${user.login.password}`,
-            */}
+        <button class="btn-submit" type="button">Save</button>
+        
         </StyledForm>
+        </div>
     )
 }
 
 export default UserForm;
 
-const StyledForm = styled.form`
-        display: flex;
-        flex-direction: column;        
-        background: white;
-        color: blue;
-        font-size: 2rem;
-        
+const styles = {
+  containerForm: {
+    background: 'red',
+    padding: '2rem',
+  },
+  formTitle: {
+    fontFamily: 'Montserrat',
+    fontSize: '3rem',
+    textTransform: 'uppercase',
+  },
+  userImage: {
+    borderRadius: '3rem',
+  }
+}
 
+const StyledForm = styled.form`
+        width: 75%;
+        display: flex;
+        flex-direction: column;    
+        padding: 2rem 2rem 2rem 4rem;
+        font-family: 'Montserrat';
+        font-size: 2rem;
+        text-transform: uppercase;    
+        // background: rgba(67, 170, 139, 1);
+        border-radius: 1.5rem;
+        color: rgba(37, 68, 65, 1);
+        
         fieldset {
             outline: none;
             border: none;
+            width: 60%;
         }
         label {
             display: block;
-            margin: 1rem 0 0 0;
+            margin: 3.5rem 0 0 0;
+            font-weight: 500;
+            color: rgba(255, 235, 245, 1);
         }
         input {
+            width: 100%;
             padding: 1rem;
+            background: rgba(255, 235, 245, 1);
             border-radius: .75rem;
-            margin: 0rem 1rem 0 0
+            font-family: 'Montserrat';
+            
+              &:placeholder {
+                text-transform: uppercase;
+              }
         }
         .name-items {
             display: flex;
             flex-direction: row;
-            color: orange;
+            gap: 0 2rem;
+            & div {
+              flex: 2 0 40%;
+            }
         }
+        .location-items {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 0rem 2rem;
+          & div {
+            flex: 2 0 40%;
+          }
+        }
+
         .pw-wrapper {
             position: relative;
         }
         .btn-toggle {
             position: absolute;
-            font-size: 2rem;
-            bottom: 10%;
-            left: 17%;
+            font-size: 2.5rem;
+            bottom: .4rem;
+            left: 60rem;
         }
         span:hover {
             cursor: pointer;
-            color: red;
+            color: rgba(247, 100, 107, 1);
         }
-
+        .btn-submit {
+          width: 12.5rem;
+          margin: 4rem 0 0 0;
+          padding: 1.2rem;
+          background: rgba(67, 170, 139, 1);
+          color: rgba(255, 235, 245, 1);
+          font-family: 'Montserrat';
+          font-size: 1.6rem;
+          font-weight: 700;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          border: none;
+          border-radius: .75rem;
+          &:hover {
+            background: rgba(126, 217, 87, 1);
+            color: rgba(37, 68, 65, 1);
+          }
+        }
 `
-
-const styles = {}
