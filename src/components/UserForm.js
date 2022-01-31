@@ -12,9 +12,9 @@ const UserForm = props => {
     
     return (
       <div style={styles.containerForm}>
-        <h1 style={styles.formTitle}>Edit User Profile</h1>
+        <h2 style={styles.formTitle}>Edit User Profile</h2>
+       
         <p><img style={styles.userImage} src={props.img} alt={props.alt} /></p>
-        
         <StyledForm>
         <fieldset class="name-items">
             <div container-inputs>
@@ -83,7 +83,6 @@ export default UserForm;
 
 const styles = {
   containerForm: {
-    background: 'red',
     padding: '2rem',
   },
   formTitle: {
@@ -93,6 +92,7 @@ const styles = {
   },
   userImage: {
     borderRadius: '3rem',
+    margin: '2rem 0 0 3rem',
   }
 }
 
@@ -128,6 +128,10 @@ const StyledForm = styled.form`
             
               &:placeholder {
                 text-transform: uppercase;
+              }
+              &:focus {
+                // outline: none;
+                outline: 1px solid rgba(247, 100, 107, 1);
               }
         }
         .name-items {
