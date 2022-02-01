@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import UserForm from '../components/UserForm';
 
 function UserSettings() {
-   const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState();
 
@@ -38,12 +38,13 @@ function UserSettings() {
         setLoading(false);
       });
     }, []);
-
+    // You can make this into a tirenary in the return statement. Build a loading component. if loaded ? do this : err
     if (loading) return <p style={styles.loadingStyle}>'Loading...'</p>;
     if (err) return "Error!";
       
   return (
     <div>
+      {/* You could add the tirenary here. */}
       <h1 style={styles.title}>Settings</h1>
       <h2 style={styles.h2}>{loading}</h2>
         {!loading && userData.length > 0 ? userData.map(user => {

@@ -9,20 +9,18 @@ const PostArticle = props => {
     return (
         <article style={styles.myPostArticle}>
             <img style={styles.postImg} src={props.val.pImg} alt={props.val.pAlt} />
-                <div style={styles.content}>
-                    <div style={styles.titleGroup}>
-                        <Avatar AvatarIcon={AvatarImageURL} />
-                        <h2 style={styles.postTitle}>{props.val.pName}</h2>
-                    </div>
-                        <p style={styles.postText}>{props.val.pText}</p>
-                    </div>
-
-                    <div style={styles.buttons}>
-                        <PostIcons><FaEdit /></PostIcons>
-                        <PostIcons><RiDeleteBin6Line onClick={props.deleteItem} /></PostIcons>
-                    </div>
+            <div style={styles.content}>
+                <div style={styles.titleGroup}>
+                    <Avatar AvatarIcon={AvatarImageURL} />
+                    <h2 style={styles.postTitle}>{props.val.pName}</h2>
+                </div>
+                    <p style={styles.postText}>{props.val.pText}</p>
+            </div>
+            <div style={styles.buttons}>
+                <PostIcons><FaEdit /></PostIcons>
+                <PostIcons><RiDeleteBin6Line onClick={props.deleteItem} /></PostIcons>
+            </div>
         </article>
-
     )
 }
 
@@ -34,8 +32,7 @@ const PostIcons = styled.button`
         background: none;
         border: none;
         margin-right: 2rem;
-        color: rgba(37, 68, 65, 1);
-        
+        color: rgba(37, 68, 65, 1);        
         &:hover {
             color: rgba(247, 100, 107, 1);
         }
@@ -52,7 +49,6 @@ const styles = {
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     boxShadow: '10px 5px 10px rgba(255, 235, 245, .4), 0 6px 15px 0 rgba(255, 235, 245, .3)',
-
     },
     postImg: {
         width: '300px',
@@ -81,8 +77,7 @@ const styles = {
         lineHeight: '2.5rem',
     },
     buttons: {
-      marginTop: '2rem',
-      width: '33%',
-    },
-    
+        marginTop: '2rem',
+        width: '33%',
+    }
 }

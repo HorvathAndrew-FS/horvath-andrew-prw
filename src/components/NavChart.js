@@ -1,14 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
 //navigation icons
 import { HiOutlineDocumentReport } from "react-icons/hi";
 import { MdDashboardCustomize, MdOutlineSavings  } from "react-icons/md";
 import { BsCashCoin } from "react-icons/bs";
 import { GiPayMoney } from "react-icons/gi";
-
-
 //avatar for settings buttons
 import AvatarImageURL from '../images/AvatarAndrew-sm.svg';
 import Avatar from './Avatar';

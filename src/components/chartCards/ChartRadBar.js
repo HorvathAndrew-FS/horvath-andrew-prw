@@ -31,5 +31,4 @@ const styles = {
         margin: '1rem 0 2rem 2.5rem',
         color: 'rgba(247, 100, 107, 1)',
     }
-
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import { GoSettings } from "react-icons/go";
 import { BsSearch } from "react-icons/bs";
 import { GiSquirrel } from "react-icons/gi";
@@ -8,7 +7,7 @@ import AvatarImageURL from '../images/AvatarAndrew-sm.svg';
 import Avatar from '../components/Avatar';
 import Logo from '../images/digitalLogo.jpg';
 
-const MainHeader = props => {
+const MainHeader = () => {
     return (
         <header style={styles.mainHeader}>
             <div style={styles.logoWrapper}>

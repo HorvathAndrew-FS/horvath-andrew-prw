@@ -50,9 +50,9 @@ const styles = {
         marginLeft: '1%',
     },
     logo: {
-       height: '50px',
-       width: '50px',
-       marginRight: '1rem',
+        height: '50px',
+        width: '50px',
+        marginRight: '1rem',
     },
     companyTitle: {
         fontFamily: 'Montserrat',

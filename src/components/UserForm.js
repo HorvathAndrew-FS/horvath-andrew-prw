@@ -13,10 +13,9 @@ const UserForm = props => {
     return (
       <div style={styles.containerForm}>
         <h2 style={styles.formTitle}>Edit User Profile</h2>
-       
         <p><img style={styles.userImage} src={props.img} alt={props.alt} /></p>
         <StyledForm>
-        <fieldset class="name-items">
+          <fieldset class="name-items">
             <div container-inputs>
               <label for="fname">First</label>
               <input value={props.firstName} type="text" name="fname"/>
@@ -25,55 +24,48 @@ const UserForm = props => {
               <label for="lname">Last</label>
               <input value={props.lastName} type="text" name="lname" placeholder="Last"/>
             </div>
-        </fieldset>
-        
-        <fieldset class="contact-items">
-          <label for="email">Email</label>
-          <input value={props.emailAddress} type="text" name="email"/>
-          
-          <label for="contact-number">Contact Number</label>
-          <input value={props.contactNumber} type="text" name="contact-number"/>
-        </fieldset>
-        
-        <fieldset class="location-items">
-          <div>
-          <label for="address">Address</label>
-          <input value={props.address} type="text" name="address" placeholder="Street address" />
-          </div>
-          <div>
-            <label for="city">City</label>
-            <input value={props.city} type="text" name="city" placeholder="City" />
+          </fieldset>        
+          <fieldset class="contact-items">
+            <label for="email">Email</label>
+            <input value={props.emailAddress} type="text" name="email"/>          
+            <label for="contact-number">Contact Number</label>
+            <input value={props.contactNumber} type="text" name="contact-number"/>
+          </fieldset>        
+          <fieldset class="location-items">
+            <div>
+              <label for="address">Address</label>
+              <input value={props.address} type="text" name="address" placeholder="Street address" />
             </div>
             <div>
-            <label for="state">State</label>
-            <input value={props.userState} type="text" name="state" placeholder="State" />
+              <label for="city">City</label>
+              <input value={props.city} type="text" name="city" placeholder="City" />
+            </div>
+            <div>
+              <label for="state">State</label>
+              <input value={props.userState} type="text" name="state" placeholder="State" />
             </div>
             <div>            
-            <label type="text" name="Zip Code">Zip Code</label>
-            <input value={props.zipCode} type="text" name="name" placeholder="Postal / Zip code" />
+              <label type="text" name="Zip Code">Zip Code</label>
+              <input value={props.zipCode} type="text" name="name" placeholder="Postal / Zip code" />
             </div>
             <div>
-            <label for="country">Country</label>
-            <input value={props.country} type="text" name="country" placeholder="Country" />
+              <label for="country">Country</label>
+              <input value={props.country} type="text" name="country" placeholder="Country" />
             </div>
-        </fieldset>
-
-        <fieldset>
-                <div>
+          </fieldset>
+          <fieldset>
+            <div>
               <label for="username" >Username</label>
               <input value={props.username} type="text" name="username" placeholder="Username" />
             </div>
-
             <div class="pw-wrapper">
               <label for="password" >Password</label>
               <input value={props.password} type={passwordVis ? "text" : "password"} name="password" placeholder="Password"/>
               <span class="btn-toggle" onClick={togglePW} >{<FaEye />}</span>
               {/* <button class="btn-toggle" onClick={togglePW}>Show Password</button> */}
             </div>
-        </fieldset>
-
-        <button class="btn-submit" type="button">Save</button>
-        
+          </fieldset>
+          <button class="btn-submit" type="button">Save</button>
         </StyledForm>
         </div>
     )

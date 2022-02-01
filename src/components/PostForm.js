@@ -4,8 +4,6 @@ import Button from './buttons/ButtonOutline';
 import AvatarImageURL from '../images/AvatarAndrew.svg';
 import Avatar from '../components/Avatar';
 
-
-
 const PostForm = props => {
     return (
         <StyleComp>
@@ -15,7 +13,6 @@ const PostForm = props => {
                 value={props.pName}
                 onChange={props.getInput}
                 placeholder="Post Title" />
-            
                 <div className="form-group">
                     <Avatar AvatarIcon={AvatarImageURL} />
                     <textarea
@@ -23,7 +20,6 @@ const PostForm = props => {
                     value={props.pText}
                     onChange={props.getInput}
                     placeholder="What's Your Boggle?" />
-                 
                 </div>
                 <div className="form-group-2">
                     <input
@@ -32,12 +28,10 @@ const PostForm = props => {
                     value={props.pImg}
                     onChange={props.getInput}
                     placeholder="Add Image" />
-
                     <Button {...props} />
                 </div>
             </form>
         </StyleComp>
-
     )
 };
 export default PostForm;
@@ -89,7 +83,7 @@ const StyleComp = styled.div`
         &::placeholder {
             color: rgba(255, 235, 245, 1);
         }
-     }
+    }
     .form-group {
         display: flex;
         align-items: center;

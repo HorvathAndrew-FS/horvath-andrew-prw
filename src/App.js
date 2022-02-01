@@ -23,7 +23,6 @@ function App() {
                 <Route path='incomeChart' element={<IncomeChart />} />
                 <Route path='savingChart' element={<SavingChart />} />
                 <Route path='spendingChart' element={<SpendingChart />} />
-
               </Routes>
             </section>
         </main>
