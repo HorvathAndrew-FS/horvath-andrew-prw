@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/assets/projectFiles/dashReactApp/public/index.html/static/css/main.b352b7e4.css",
-    "main.js": "/assets/projectFiles/dashReactApp/public/index.html/static/js/main.36da3351.js",
-    "static/js/787.b459eb84.chunk.js": "/assets/projectFiles/dashReactApp/public/index.html/static/js/787.b459eb84.chunk.js",
-    "static/media/AvatarAndrew-sm.svg": "/assets/projectFiles/dashReactApp/public/index.html/static/media/AvatarAndrew-sm.8b2f22be20cf5b37ba8da9ee8220c996.svg",
-    "index.html": "/assets/projectFiles/dashReactApp/public/index.html/index.html",
-    "main.b352b7e4.css.map": "/assets/projectFiles/dashReactApp/public/index.html/static/css/main.b352b7e4.css.map",
-    "main.36da3351.js.map": "/assets/projectFiles/dashReactApp/public/index.html/static/js/main.36da3351.js.map",
-    "787.b459eb84.chunk.js.map": "/assets/projectFiles/dashReactApp/public/index.html/static/js/787.b459eb84.chunk.js.map"
+    "main.css": "/horvath-andrew-prw/static/css/main.b352b7e4.css",
+    "main.js": "/horvath-andrew-prw/static/js/main.f9f0f483.js",
+    "static/js/787.b459eb84.chunk.js": "/horvath-andrew-prw/static/js/787.b459eb84.chunk.js",
+    "static/media/AvatarAndrew-sm.svg": "/horvath-andrew-prw/static/media/AvatarAndrew-sm.8b2f22be20cf5b37ba8da9ee8220c996.svg",
+    "index.html": "/horvath-andrew-prw/index.html",
+    "main.b352b7e4.css.map": "/horvath-andrew-prw/static/css/main.b352b7e4.css.map",
+    "main.f9f0f483.js.map": "/horvath-andrew-prw/static/js/main.f9f0f483.js.map",
+    "787.b459eb84.chunk.js.map": "/horvath-andrew-prw/static/js/787.b459eb84.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b352b7e4.css",
-    "static/js/main.36da3351.js"
+    "static/js/main.f9f0f483.js"
   ]
 }
