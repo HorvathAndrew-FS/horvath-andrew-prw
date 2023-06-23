@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GoSettings } from "react-icons/go";
+import { Link } from 'react-router-dom';
+
+import { CgNotifications } from "react-icons/cg";
 import { BsSearch } from "react-icons/bs";
-import { GiSquirrel } from "react-icons/gi";
 import AvatarImageURL from '../images/AvatarAndrew-sm.svg';
-import Avatar from '../components/Avatar';
+import Avatar from './Avatar';
 import Logo from '../images/digitalLogo.jpg';
 
-const MainHeader = () => {
+const MainHeader = props => {
     return (
         <header style={styles.mainHeader}>
             <div style={styles.logoWrapper}>
@@ -22,9 +23,9 @@ const MainHeader = () => {
                 placeholder="Search" />
             </div>
             <nav style={styles.rightNav}>
-                <NavIcons><GoSettings /></NavIcons>
-                <NavIcons><GiSquirrel /></NavIcons>
-                <Avatar AvatarIcon={AvatarImageURL} />
+                <NavIcons><CgNotifications /></NavIcons>
+                <LinkStyled to="/settingChart">{<Avatar AvatarIcon={AvatarImageURL} AvatarAlt='This is where I would tell you about my wonderful Avatar' />}
+                </LinkStyled>
             </nav>
         </header>
     )
@@ -49,9 +50,9 @@ const styles = {
         marginLeft: '1%',
     },
     logo: {
-       height: '50px',
-       width: '50px',
-       marginRight: '1rem',
+        height: '50px',
+        width: '50px',
+        marginRight: '1rem',
     },
     companyTitle: {
         fontFamily: 'Montserrat',
@@ -78,6 +79,7 @@ const styles = {
         flex: '1',
         padding: '1rem',
         background: 'rgba(255, 235, 245, 1)',
+        // outline: 'none',
     },
     rightNav: {
         display: 'flex',
@@ -97,4 +99,16 @@ const NavIcons = styled.button`
         &:hover {
             color: rgba(126, 217, 87, 1);
         }
+`
+const LinkStyled = styled(Link)`
+    height: 5rem;
+    width: 5rem;
+    background: none;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(37, 68, 65, 1);
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    }
 `

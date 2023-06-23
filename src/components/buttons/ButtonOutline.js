@@ -15,7 +15,7 @@ export default ButtonOutline
 const Outline = styled.button`
     height: 4.5rem;
     width: 12rem;
-    background: transparent;
+    background: rgba(126, 217, 87, 1);
     font-size: 1.6rem;
     font-weight: 700;
     color: rgba(37, 68, 65, 1);
@@ -24,6 +24,6 @@ const Outline = styled.button`
     border-radius: 5px;
 
     &:hover {
-        background: rgba(126, 217, 87, 1);
+        background: rgba(247, 100, 107, 1);
     }
 `

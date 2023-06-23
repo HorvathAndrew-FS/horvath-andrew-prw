@@ -1,51 +1,33 @@
-import React, {Component} from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/HeaderChart';
+import Nav from './components/NavChart';
+import Dashboard from './pages/Dashboard';
+import ReportsChart from './pages/ReportsChart';
+import IncomeChart from './pages/IncomeChart';
+import SavingChart from './pages/SavingChart';
+import SpendingChart from './pages/SpendingChart';
+import Settings from './pages/UserSettings';
 
-//images
-// import AvatarIcon from '../src/images/AvatarAndrew.jpg';
-// import Avatar from '../src/components/Avatar';
-//header
-import MainHeader from './components/MainHeader'
-
-//form
-import PostForm from './components/PostForm';
-
-
-//ads
-import MyAd from './components/MyAd';
-import Sprouts from './images/sprouts.jpg';
-import Tech from './images/tech-gadgets.jpg';
-
-//left side
-import LeftSideNav from './components/LeftNav';
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <MainHeader />
-          <div style={styles.container}>
-            <aside style={styles.leftNav}>
-                <LeftSideNav />
-            </aside>
-
-                <PostForm />
-
-                <aside style={styles.ads}>
-                  <MyAd articleImg={Sprouts} articleAlt="This is my alt tag for brussel sprouts!!"
-                    articleTitle="Brussel Sprouts"
-                    articleText="Brussel sprouts are a wonderfully delicious vegetable. Eveyone should enjoy how amazing they are       when roasted! a little olive oil and some salt go a long way!" />
-
-                  <MyAd articleImg={Tech} articleAlt="This is my alt tag for a bunch of techie gadgets!"
-                    articleTitle="How Much Tech is Too Much Tech?"
-                    articleStatement="There's no denying tech skills can give kids a leg up in the world of college and career."
-                    articleText="But despite the benefits, too much tech use is contributing to serious health and
-                      psychological concerns,       leaving leaders with the tough task of drawing a line between access and obsession. Let's take a closer look      at the impacts of too much tech use and explore 3 steps district tech leaders can take toward a more balanced     approach to technology." />
-                  </aside>
-            </div>
-        </div>
-  
-    );
-  }
+function App() {
+  return (
+    <div>
+      <Header />
+        <main style={styles.container}>
+          <Nav style={styles.navLeft} />
+            <section style={styles.sectionContent}>
+              <Routes>
+                <Route path='/' element={<Dashboard />} />
+                <Route path='settingChart' element={<Settings />} />
+                <Route path='dashboard' element={<Dashboard />} />
+                <Route path='reportsChart' element={<ReportsChart />} />
+                <Route path='incomeChart' element={<IncomeChart />} />
+                <Route path='savingChart' element={<SavingChart />} />
+                <Route path='spendingChart' element={<SpendingChart />} />
+              </Routes>
+            </section>
+        </main>
+    </div>
+  );
 }
 
 export default App;
@@ -54,18 +36,21 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+    padding: '0 1rem',
     background: 'rgba(255, 235, 245, 1)',
   },
-  leftNav: {
-    width: '20%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    paddingTop: 20,
-
+  sectionContent: {
+    width: '95%',
+    height: 'fit-content',
+    background: 'rgba(37, 68, 65, 1)',
+    color: 'rgba(255, 235, 245, 1)',
+    padding: '2rem 5rem 5rem 5rem',
+    borderRadius: '1rem',
   },
-  ads: {
-    paddingRight: 20,
-  }
+  navLeft: {
+    // display: 'flex',
+    // flexDirection: 'column',
+    // paddingTop: 10,
+  },
 }
