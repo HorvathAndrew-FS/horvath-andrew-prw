@@ -49,8 +49,8 @@ const styles = {
     borderRadius: '1rem',
   },
   navLeft: {
-    display: 'flex',
-    flexDirection: 'column',
-    paddingTop: 10,
+    // display: 'flex',
+    // flexDirection: 'column',
+    // paddingTop: 10,
   },
 }
