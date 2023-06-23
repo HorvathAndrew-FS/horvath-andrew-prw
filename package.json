@@ -2,7 +2,7 @@
   "name": "horvath-andrew-prw",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://horvathandrew-fs.github.io/",
+  "homepage": "https://horvathandrew-fs.github.io/horvath-andrew-prw/",
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
