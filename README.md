@@ -11,8 +11,6 @@ This repo contains these reusable components:
 - Side Ads/Cards
 - Post Form
 
-<br>
-
 ## Week Two – Functionality
 
 Week Two added functionality to the post orientated single page app.  
@@ -25,4 +23,4 @@ For this weeks additions, they are:
 
 ## Week Three - Using Hooks
 
-another test of git
+another test, testing of this dumb git stuff.
